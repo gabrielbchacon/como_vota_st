@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 
 #Data Load and preparation
-file = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/deputado_None'
+file = './data/deputado_None'
 data = None
 with open(file, 'r') as f:
     data = json.load(f)
@@ -20,7 +20,7 @@ for deputado_id in tqdm(ids):
     despesas_total_df.append({'id': id, 'nome': nome, 'total_despesas': total_despesas})
 
 
-path_despesas = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/despesas/'
+path_despesas = './data/despesas/'
 filename = 'despesas_totais'
 with open(path_despesas + filename, 'w') as f:
     json.dump(despesas_total_df, f, indent=4)

@@ -17,7 +17,7 @@ class get_data:
             self.deputado_data = data
 
     def get_deputado_data(self):
-        deputados_arquivo = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/deputado_None'
+        deputados_arquivo = './data/deputado_None'
         dados_deputados = None
         with open(deputados_arquivo, 'r') as f:
             dados_deputados = json.load(f)
@@ -52,7 +52,7 @@ class get_data:
 
     def get_despesa_total(self):
         self.get_deputado_data()
-        despesas_arquivo = f'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/despesas/despesas_{self.deputado_id}'
+        despesas_arquivo = f'./data/despesas/despesas_{self.deputado_id}'
         despesas_deputado = None
         with open(despesas_arquivo, 'r') as f:
             despesas_deputado = json.load(f)
@@ -64,7 +64,7 @@ class get_data:
         
 
     def dump_deputados_base(self):
-        path_ = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/'
+        path_ = './data/'
         filename = f'deputado_{self.deputado_id}'
         with open(path_ + filename, 'w') as f:
             json.dump(self.deputado_data, f, indent=4)
@@ -72,7 +72,7 @@ class get_data:
         print('file dumped to', filename)
     
     def dump_deputados_despesas(self):
-        path_despesas = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/despesas/'
+        path_despesas = './data/despesas/'
         filename = f'despesas_{self.deputado_id}'
         with open(path_despesas + filename, 'w') as f:
             json.dump(self.get_deputado_despesas_all(), f, indent=4)

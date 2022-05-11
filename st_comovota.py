@@ -11,7 +11,7 @@ import streamlit as st
 
 
 #Data Load and preparation
-file = 'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/deputado_None'
+file = './data/deputado_None'
 data = None
 with open(file, 'r') as f:
     data = json.load(f)
@@ -49,7 +49,7 @@ if add_sidebar == 'Deputado':
     
     if relatorio == 'Despesas':
         #Data Preparation
-        despesas_arquivo = f'C:/Users/Gabriel/Documents/GitHub/como_vota_st/data/despesas/despesas_{deputado_escolhido_id}'
+        despesas_arquivo = f'./data/despesas/despesas_{deputado_escolhido_id}'
         despesas_deputado = None
         with open(despesas_arquivo, 'r') as f:
             despesas_deputado = json.load(f)
