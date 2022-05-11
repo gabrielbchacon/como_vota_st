@@ -1,0 +1,21 @@
+[
+    {
+        "ano": 2022,
+        "mes": 4,
+        "tipoDespesa": "COMBUST\u00cdVEIS E LUBRIFICANTES.",
+        "codDocumento": 7373673,
+        "tipoDocumento": "Nota Fiscal Eletr\u00f4nica",
+        "codTipoDocumento": 4,
+        "dataDocumento": "2022-04-27",
+        "numDocumento": "2060",
+        "valorDocumento": 290.0,
+        "urlDocumento": "http://camara.leg.br/cota-parlamentar/nota-fiscal-eletronica?ideDocumentoFiscal=7373673",
+        "nomeFornecedor": "JT COMERCIO DE DERIVADOS DE PETROLEO LTDA",
+        "cnpjCpfFornecedor": "37128477000329",
+        "valorLiquido": 290.0,
+        "valorGlosa": 0.0,
+        "numRessarcimento": "",
+        "codLote": 1849971,
+        "parcela": 0
+    }
+]
