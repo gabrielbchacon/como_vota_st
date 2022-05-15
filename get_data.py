@@ -8,6 +8,8 @@ class get_data:
         self.deputado_id = deputado_id
         self.deputado_data = None
         self.deputado_nome = None
+        self.deputado_partido = None
+        self.deputado_uf = None
 
     def get_deputado_data_all(self):
         if self.deputado_id == None:
@@ -24,6 +26,8 @@ class get_data:
         dados_deputado = next(item for item in dados_deputados['dados'] if item["id"] == self.deputado_id)
         self.deputado_data = dados_deputado
         self.deputado_nome = dados_deputado['nome']
+        self.deputado_partido = dados_deputado['siglaPartido']
+        self.deputado_uf = dados_deputado['siglaUf']
         return dados_deputado
 
 
@@ -60,8 +64,7 @@ class get_data:
         if despesas_deputado:
             despesas_deputado_df = pd.DataFrame(despesas_deputado)
             despesas_totais = despesas_deputado_df['valorLiquido'].sum()
-        return self.deputado_id, self.deputado_nome, despesas_totais
-        
+        return self.deputado_id, self.deputado_nome, self.deputado_partido, self.deputado_uf, despesas_totais
 
     def dump_deputados_base(self):
         path_ = './data/'

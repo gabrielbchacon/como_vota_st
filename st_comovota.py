@@ -49,12 +49,25 @@ if add_sidebar == 'Deputado':
     
     if relatorio == 'Despesas':
         #Data Preparation
+        ## Carregando Despesas do Deputado
         despesas_arquivo = f'./data/despesas/despesas_{deputado_escolhido_id}'
         despesas_deputado = None
         with open(despesas_arquivo, 'r') as f:
             despesas_deputado = json.load(f)
         despesas_df = pd.DataFrame(despesas_deputado)
+
+        ##Carregando Despesas Totais
+        despesas_totais_arquivo = f'./data/despesas/despesas_totais'
+        despesas_deputados_totais = None
+        with open(despesas_totais_arquivo, 'r') as f:
+            despesas_deputados_totais = json.load(f)
+        despesas_totais_df = pd.DataFrame(despesas_deputados_totais)
+
+        media_despesas = round(despesas_totais_df['total_despesas'].mean(), 2)
+
+
         total_despesas = round(despesas_df['valorLiquido'].sum(),2)
+        total_vs_media = (round(total_despesas / media_despesas,2) *100) -100
         media_despesas = round(despesas_df['valorLiquido'].mean(),2)
         maior_despesa_nome = despesas_df.iloc[despesas_df['valorLiquido'].idxmax(axis=0)].nomeFornecedor
         maior_despesa_valor = despesas_df.iloc[despesas_df['valorLiquido'].idxmax(axis=0)].valorLiquido
@@ -67,7 +80,7 @@ if add_sidebar == 'Deputado':
         #Data to print
         col1, col2 = st.columns(2)
         with col1:
-            st.metric('Valor total de Despesas', f'R$ {total_despesas:,}')
+            st.metric('Valor total de Despesas', f'R$ {total_despesas:,}', delta=f'{total_vs_media} % vs média da casa', delta_color='off')
             st.metric(f'Maior Despesa:\n{maior_despesa_nome}', f'R$ {maior_despesa_valor:,}')
         with col2:
             st.metric('Valor médio de Despesas', f'R$ {media_despesas:,}')
