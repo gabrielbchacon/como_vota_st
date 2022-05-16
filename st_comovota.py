@@ -90,4 +90,4 @@ if add_sidebar == 'Deputado':
         st.dataframe(despesas_df)
     else:
         st.write('Participações')
-
+# %%

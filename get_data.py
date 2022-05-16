@@ -82,4 +82,4 @@ class get_data:
         
         print('file dumped to', filename)
 
-    
+

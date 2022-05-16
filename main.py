@@ -1,20 +1,21 @@
 from get_data import get_data
 from get_votacoes import get_votacoes
+from get_proposicoes import get_proposicoes
 import json
 import pandas as pd
 from tqdm import tqdm
 
 
-votacoes = get_votacoes()
+proposicoes = get_proposicoes()
+proposicoes.get_proposicoes_all()
+proposicoes.dump_proposicoes()
+
+'''votacoes = get_votacoes()
 votacoes.votacoes_all()
-votacoes.dump_votacoes()
+votacoes.dump_votacoes()'''
 
-#Data Load and preparation
-'''file = './data/deputado_None'
-data = None
-with open(file, 'r') as f:
-    data = json.load(f)'''
 
+# %%
 '''df = pd.DataFrame(data['dados'])
 ids = df['id'].tolist()
 
@@ -34,5 +35,4 @@ with open(path_despesas + filename, 'w') as f:
 '''for deputado_id in tqdm(ids):
     data_got = get_data(deputado_id)
     data_got.dump_deputados_despesas()'''
-
 
