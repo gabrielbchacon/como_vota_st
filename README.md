@@ -1,15 +1,21 @@
-# "Como Vota" (How do you vote?)
+### COMO VOTA? (How do you vote?)
 
-I also have an interest in app development. I got courses about HTML, CSS, Javascript, and ReactJs, but my focus is Python.
+#### Overview
+"Como Vota?" is an application designed to enhance transparency in the political arena of Brazil by providing insights into parliamentary activities. This tool aims to offer a clearer understanding of voting behaviors and parliamentary decisions, addressing the lack of transparency in Brazilian politics.
 
- I decided to build an application called "Como Vota" (How do you vote?) which allows people to have a better understanding of the parliamentary activity, giving a level of transparency I believe is missing in the political scenario in Brazil. 
+#### Technical Approach
+- **Web Application Development:** Developed using Streamlit, a library that simplifies creating and hosting web applications.
+- **API Integration:** Utilized APIs to fetch parliamentary data, requiring skills in working with API endpoints and handling JSON data structures.
+- **Data Visualization:** Implemented visualizations using Plotly and Seaborn to represent the data effectively and engagingly.
+- **Future Enhancements:**
+  - **Cloud Hosting:** Planning to host the application and its data processing methods in the cloud to facilitate automatic updates.
+  - **Community Engagement:** Intends to share the datasets on the Kaggle platform, enabling the community to conduct their analyses.
+  - **Natural Language Processing (NLP):** Plans to incorporate NLP to analyze parliamentary speeches and assess congresspeople's interests and focus areas.
 
-I built it using a lib called Streamlit that allows creating a web app and host in a very easy way. It was required to know how to work with API and build objects to extract and dump the JSON files.
+#### Repository
+The source code and additional resources can be found in the GitHub repository: [Como Vota on GitHub](https://github.com/gabrielbchacon/como_vota_st)
 
- Further, I will host all those methods in the cloud to automate the process of updating data. I'm also planning to share those bases on the Kaggle platform to allow the community to analyze this dataset. I also have plans to work with NLP to analyze the speech and give an overview of the congresspeople's interests. 
+#### Conclusion
+The "Como Vota?" application bridges the gap between citizens and their representatives by providing a platform that demystifies parliamentary proceedings. By leveraging modern web technologies and data analytics, this project serves as a pivotal tool for fostering political awareness and engagement in Brazil.
 
-You can check the application at the following link: 
-https://share.streamlit.io/gabrielbchacon/como_vota_st/main/st_comovota.py
-
-The source you can check at this rep:
 https://github.com/gabrielbchacon/como_vota_st
